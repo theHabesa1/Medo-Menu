@@ -1,0 +1,38 @@
+/* Header.css */
+
+.menu-header {
+    background: rgba(255, 255, 255, 0.33);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px; /* Round off the corners */
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+  
+  }
+  
+  .restaurant-name {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif; /* Change the font to Poppins */
+    text-align: center; /* Center the restaurant name */
+    border-radius: 5px; /* Round off the corners */
+  }
+  
