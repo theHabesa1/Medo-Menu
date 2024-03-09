@@ -5,9 +5,9 @@ import './Menu.css';
 
 const Menu = () => {
   // Dummy data for categories and menu items
-  const categories = ['All','Appetizers', 'Main Course', 'Desserts','Breakfast'];
+  const categories = ['All', 'Appetizers', 'Main Course', 'Desserts', 'Breakfast'];
   const menuItems = [
-    { id: 1, category: 'Appetizers', name: 'Spring Rolls', price: '$5.99', image: 'https://th.bing.com/th/id/R.14bfc1e64c9fde9eef5a191a65730764?rik=R8sLpCtLKnIzwg&riu=http%3a%2f%2fwww.vegos.com.au%2fwp-content%2fuploads%2f2020%2f03%2fCheeseburger3.jpg&ehk=trmGTC1sv5GG10G0BJJsEqc9BCakjHkpsHSDDXo4kBM%3d&risl=&pid=ImgRaw&r=0' },
+    { id: 1, category: 'Appetizers', name: 'Spring Rolls', price: '$5.99', image: '' },
     { id: 2, category: 'Main Course', name: 'Chicken Alfredo', price: '$12.99', image: 'https://th.bing.com/th/id/OIP.TV0CNK9kOHq4f8XOokvQAQHaHQ?w=736&h=722&rs=1&pid=ImgDetMain' },
     { id: 3, category: 'Desserts', name: 'Chocolate Cake', price: '$7.99', image: 'https://th.bing.com/th/id/OIP.3qiOYdcpu2jl8G9ln1phLgHaE8?rs=1&pid=ImgDetMain' },
     { id: 4, category: 'Breakfast', name: 'Chocolate Cake', price: '$7.99', image: 'https://th.bing.com/th/id/OIP.3qiOYdcpu2jl8G9ln1phLgHaE8?rs=1&pid=ImgDetMain' },
@@ -21,7 +21,6 @@ const Menu = () => {
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
   };
-
 
   return (
     <div className="menu-container">
@@ -42,9 +41,11 @@ const Menu = () => {
       <div className="menu-items">
         {filteredMenuItems.map((item) => (
           <div key={item.id} className="menu-card">
-            <img src={item.image} alt={item.name} className="menu-image" />
-            <h3 className="menu-item-name">{item.name}</h3>
-            <p className="menu-item-price">{item.price}</p>
+            {item.image && <img src={item.image} alt={item.name} className="menu-image" />}
+            <div className="menu-details">
+              <h3 className="menu-item-name">{item.name}</h3>
+              <p className="menu-item-price">{item.price}</p>
+            </div>
           </div>
         ))}
       </div>
