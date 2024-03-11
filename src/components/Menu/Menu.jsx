@@ -11,7 +11,7 @@ const Menu = () => {
     { id: 2, category: 'Main Course', name: 'Chicken Alfredo', price: '$12.99', image: 'https://th.bing.com/th/id/OIP.TV0CNK9kOHq4f8XOokvQAQHaHQ?w=736&h=722&rs=1&pid=ImgDetMain' },
     { id: 3, category: 'Desserts', name: 'Chocolate Cake', price: '$7.99', image: 'https://th.bing.com/th/id/OIP.3qiOYdcpu2jl8G9ln1phLgHaE8?rs=1&pid=ImgDetMain' },
     { id: 4, category: 'Breakfast', name: 'Chocolate Cake', price: '$7.99', image: 'https://th.bing.com/th/id/OIP.3qiOYdcpu2jl8G9ln1phLgHaE8?rs=1&pid=ImgDetMain' },
-    // Add more menu items as needed
+
   ];
 
   const [selectedCategory, setSelectedCategory] = useState('All');
